@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:16
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
