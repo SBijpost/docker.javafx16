@@ -1,4 +1,4 @@
-FROM openjdk:16
+FROM openjdk:16-jdk-buster
 
 RUN apt-get update -y && \
     apt-get upgrade -y && \
