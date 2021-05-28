@@ -1,2 +1,2 @@
-# docker.javafx8
-OpenJDK 8 with JavaFX
+# docker.javafx16
+OpenJDK 16 with JavaFX
