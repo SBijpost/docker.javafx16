@@ -8,4 +8,16 @@ RUN apt-get update -y && \
     
 RUN rm -rf /var/lib/apt/lists/*
     
+RUN gitlab-runner register -n \
+  --url https://gitlab.fdmci.hva.nl/ \
+  --registration-token zzPduMXszxuDmMvSEwQ_ \
+  --executor docker \
+  --description "My Docker Runner" \
+  --docker-image "docker:19.03.12" \
+  --docker-privileged \
+  --docker-volumes "/certs/client"
+
+    
+
+    
 
