@@ -8,9 +8,8 @@ RUN apt-get update -y && \
     
 RUN rm -rf /var/lib/apt/lists/*
 
-RUN docker volume create gitlab-runner-config
-
-RUN docker run -d --name gitlab-runner --restart always \
+RUN docker volume create gitlab-runner-config && \
+    docker run -d --name gitlab-runner --restart always \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v gitlab-runner-config:/etc/gitlab-runner \
     gitlab/gitlab-runner:latest
